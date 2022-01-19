@@ -25,3 +25,13 @@
 ## Документация к проекту доступна по адресу:
 
 #### http://127.0.0.1:8000/redoc/
+
+## Использованные технологии:
+
+#### Python 3.9.7
+#### Django 2.2.16
+#### djangorestframework 3.12.4
+#### djangorestframework-simplejwt 4.7.2
+#### Pillow 8.3.1
+#### PyJWT 2.1.0
+#### requests 2.26.0

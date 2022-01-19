@@ -1,14 +1,13 @@
-from rest_framework import viewsets, generics
-from rest_framework.generics import get_object_or_404
-from rest_framework import permissions
-from rest_framework.pagination import LimitOffsetPagination
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.filters import SearchFilter
-
 from posts.models import Comment, Group, Post
+from rest_framework import generics, permissions, viewsets
+from rest_framework.filters import SearchFilter
+from rest_framework.generics import get_object_or_404
+from rest_framework.pagination import LimitOffsetPagination
+
+from .permissions import OwnerOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
                           PostSerializer)
-from .permissions import OwnerOrReadOnly
 
 
 class PostViewSet(viewsets.ModelViewSet):
